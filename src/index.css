@@ -22,5 +22,32 @@ html {
     .clip-path-custom-3 {
         clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
       }
+  .light-bg {
+    @apply bg-pink-50;
   }
+  .light-card {
+    @apply bg-pink-100 border-pink-200 shadow-pink-200;
+  }
+  .light-card-strong {
+    @apply bg-pink-200 border-pink-300 shadow-pink-300;
+  }
+  .light-text {
+    @apply text-gray-900;
+  }
+  .light-accent {
+    @apply text-pink-600;
+  }
+  .light-border {
+    @apply border-pink-300;
+  }
+  .light-section-title {
+    @apply text-pink-700;
+  }
+  .light-section-subtitle {
+    @apply text-gray-600;
+  }
+  .light-shadow {
+    box-shadow: 0 0 20px 1px #f9a8d4;
+  }
+}
   

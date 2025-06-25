@@ -184,3 +184,11 @@ export const SkillsInfo = [
       webapp: "https://career-craft-ai.vercel.app/",
     },
   ];  
+
+export const LIGHT_MODE_COLORS = {
+  background: '#ffffff',
+  text: '#222222',
+  accent: '#8245ec',
+  card: '#f3f4f6',
+  border: '#e5e7eb',
+};  

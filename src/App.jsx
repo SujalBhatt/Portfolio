@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
@@ -7,10 +7,12 @@ import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import BlurBlob from './components/BlurBlob';
+import { ThemeProvider, ThemeContext } from "./theme-context.jsx";
 
-const App = () => {
+const AppContent = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="bg-[#050414]">
+    <div className={theme === 'dark' ? 'bg-[#050414] dark' : 'bg-white'}>
 
        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 
@@ -23,11 +25,17 @@ const App = () => {
         <Work />
         <Education />
         <Contact />
-        <Footer />
+        <Footer theme={theme} />
       </div>
 
     </div>
   );
 };
+
+const App = () => (
+  <ThemeProvider>
+    <AppContent />
+  </ThemeProvider>
+);
 
 export default App;

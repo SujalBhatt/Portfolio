@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -11,10 +11,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className={`py-8 px-[12vw] md:px-[7vw] lg:px-[20vw] ${theme === 'light' ? 'bg-pink-100' : ''}`}>
       <div className="container mx-auto text-center">
         {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">Sujal Bhatt</h2>
+        <h2 className={`text-xl font-semibold ${theme === 'light' ? 'text-pink-600' : 'text-purple-500'}`}>Sujal Bhatt</h2>
 
         {/* Navigation Links - Responsive */}
         <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
@@ -28,7 +28,7 @@ const Footer = () => {
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className={`hover:${theme === 'light' ? 'text-pink-600' : 'text-purple-500'} text-sm sm:text-base my-1 ${theme === 'light' ? 'text-gray-600' : ''}`}
             >
               {item.name}
             </button>
@@ -36,7 +36,7 @@ const Footer = () => {
         </nav>
 
         {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
+        <p className={`text-sm mt-6 ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
           © 2025 Sujal Bhatt. All rights reserved.
         </p>
       </div>
