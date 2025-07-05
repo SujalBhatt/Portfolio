@@ -6,7 +6,6 @@ import { ThemeContext } from "../../theme-context.jsx";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
   const { theme } = useContext(ThemeContext);
 
   const sendEmail = (e) => {
@@ -21,7 +20,6 @@ const Contact = () => {
       )
       .then(
         () => {
-          setIsSent(true);
           form.current.reset(); // Reset form fields after sending
           toast.success("Message sent successfully! ✅", {
             position: "top-right",

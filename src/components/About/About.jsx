@@ -29,7 +29,7 @@ const About = () => {
               text={[
                 'Fullstack Developer',
                 'Coder',
-                'Programmer',
+                'UI/UX Designer',
                 'Tech-Enthusiast'
               ]}
               speed={100}

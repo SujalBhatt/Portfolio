@@ -106,7 +106,7 @@ const Work = () => {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com/SujalBhatt/CAREER-CRAFT-AI"
+                    href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-1/2 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center ${theme === 'light' ? 'bg-pink-300 hover:bg-pink-400 text-pink-900' : 'bg-gray-800 hover:bg-purple-800 text-gray-400'}`}
